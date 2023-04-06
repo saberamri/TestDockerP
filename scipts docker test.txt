@@ -1,0 +1,4 @@
+docker build -t test1 .
+docker run -i -t test1
+docker ps -a
+docker image ls
