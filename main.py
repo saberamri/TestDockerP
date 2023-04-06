@@ -10,13 +10,17 @@ from sklearn.linear_model import LogisticRegression
 
 # Load dataset
 def read():
+    """_summary_
+    """
     url = "https://raw.githubusercontent.com/jbrownlee/Datasets/master/iris.csv"
     names = ['sepal-length', 'sepal-width', 'petal-length', 'petal-width', 'class']
     dataset = read_csv(url, names=names)   
     return(dataset)
 
 #build training and data test
-def look_splits():   
+def look_splits():
+    """_summary_
+    """
     # Split-out validation dataset
     array = read().values
     X = array[:,0:4]
@@ -26,7 +30,9 @@ def look_splits():
 
 
 #build resgression model
-def regression_log():   
+def regression_log():
+    """_summary_
+    """
     # Spot Check Algorithms
     models = []
     models.append(('LR', LogisticRegression(solver='liblinear', multi_class='ovr')))
@@ -41,7 +47,9 @@ def regression_log():
         print('%s: %f (%f)' % (name, cv_results.mean(), cv_results.std()))
 
 #build svm model
-def svm():  
+def svm():
+    """_summary_
+    """
     # Spot Check Algorithms
     models = []
     models.append(('SVM', SVC(gamma='auto')))
@@ -57,7 +65,9 @@ def svm():
         print('%s: %f (%f)' % (name, cv_results.mean(), cv_results.std()))
 
 #build tree model
-def tree():   
+def tree():
+    """_summary_
+    """
     # Spot Check Algorithms
     models = []
     models.append(('CART', DecisionTreeClassifier()))
@@ -75,6 +85,8 @@ def tree():
 
 #main fonction
 def main():
+    """_summary_
+    """
     
     dataS = read()
     print(dataS)
