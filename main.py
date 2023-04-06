@@ -7,7 +7,7 @@ from sklearn.model_selection import train_test_split
 from sklearn.svm import SVC
 from sklearn.linear_model import LogisticRegression
 
-
+#Ajout depuis vscode
 # Load dataset
 def read():
     """_summary_
